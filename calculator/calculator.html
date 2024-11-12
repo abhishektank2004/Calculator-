@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <input type="text" id="result" class="form-control mb-3 text-end" value="0" disabled>
+
+                    <!-- First Row -->
+                    <div class="row g-2">
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="clearResult()">AC</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendOperator('%')">%</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendOperator('(')">(</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendOperator(')')">)</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendOperator('!')">x!</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="removeLast()">⌫</button>
+                        </div>
+                    </div>
+
+                    <!-- Second Row -->
+                    <div class="row g-2 mt-2">
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendFunction('sin')">sin</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendFunction('cos')">cos</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendFunction('tan')">tan</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendNumber('7')">7</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendNumber('8')">8</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendNumber('9')">9</button>
+                        </div>
+                    </div>
+
+                    <!-- Third Row -->
+                    <div class="row g-2 mt-2">
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendFunction('log')">log</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendFunction('ln')">ln</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendOperator('√')">√</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendNumber('4')">4</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendNumber('5')">5</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendNumber('6')">6</button>
+                        </div>
+                    </div>
+
+                    <!-- Fourth Row -->
+                    <div class="row g-2 mt-2">
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendNumber('π')">π</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendFunction('exp')">exp</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendOperator('^')">xʸ</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendNumber('1')">1</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendNumber('2')">2</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendNumber('3')">3</button>
+                        </div>
+                    </div>
+
+                    <!-- Fifth Row -->
+                    <div class="row g-2 mt-2">
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendOperator('e')">e</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendNumber('0')">0</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendOperator('.')">.</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendOperator('/')">÷</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendOperator('*')">×</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-primary calc-btn" onclick="calculateResult()">=</button>
+                        </div>
+                    </div>
+
+                    <!-- Sixth Row -->
+                    <div class="row g-2 mt-2">
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendOperator('+')">+</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light calc-btn" onclick="appendOperator('-')">-</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

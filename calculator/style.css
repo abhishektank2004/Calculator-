@@ -1,0 +1,45 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+#result {
+    font-size: 2rem;
+    text-align: right;
+    height: 60px;
+    padding: 10px;
+    background-color: #f1f3f5;
+    border: none;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.calc-btn {
+    font-size: 1.2rem;
+    padding: 15px;
+    width: 100%;
+    height: 70px;
+    border: none;
+    display: inline-block;
+}
+
+.btn-light {
+    background-color: #5abbf3;
+    border-color: solid black;
+    color: #212529;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #000;
+    color: #ffffff;
+}
+
+.row.g-2 > .col-2 {
+    padding: 0 5px;
+}
